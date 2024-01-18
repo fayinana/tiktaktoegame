@@ -1,1 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+:root{
+
+    --clr-primery-1:#006d77;  
+    --clr-secondery-1:#29de92;
+
+    --clr-dark:#000000;
+    --clr-light:#ffffff;
+    --clr-blue:rgb(10, 51, 90);
+    --darck-blue:rgb(11, 55, 103);
+    
+    --radius:10px;
+    
+    --traslation-1:all 2s ease; 
+    --traslation-2:all 5s ease; 
+  }
+  
+  body{
+  text-align: center;
+}
+
+
+
+.title{
+    padding: 1rem;
+    margin-bottom:30px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.background{
+    position: absolute;
+    width: 75px;
+    height: 40px;
+    background: var(--clr-blue);
+    z-index: -1;
+    top: 40px;
+    left: 0px;
+    border: none;
+transition: all .5s ease-out;
+
+}
+
+.display{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 150px;
+    height: 80px;
+    margin: auto;
+    text-align: center;
+
+}
+
+.align{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.display h3{
+    grid-column-start:1;
+grid-column-end: 3;
+margin: 0;
+font-size: 1.5rem;
+text-transform: capitalize;
+
+}
+
+
+.display .turn{
+    font-size: 2rem;
+    font-weight: 900;
+border: 1px solid var(--clr-blue);
+outline: 1px solid var(--clr-light);
+outline-offset: 1px;
+
+
+}
+
+
+
+.game-conteiner{
+   width: 280px;
+   height: 280px;
+    border-radius: var(--radius);
+    margin: 5vh auto 0px auto ;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: .5rem;
+    padding: 10px;
+    background: var(--clr-background-body);
+    
+}
+
+.box{
+    background: var(--clr-blue);
+    border-radius: 10px;
+    font-size: 3.6rem;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+.even{
+    color: #db1e90;
+}
+.odd{
+    color: #edff08;
+}
+
+.button{
+    margin:1rem 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    font-weight: 900;
+    padding:.8rem 2rem ;
+    color:white;
+    border: 1.5px solid var(--darck-blue);
+    border-radius: 12px;
+    background: var(--clr-blue);
+    cursor: pointer;
+
+
+}
+
+.button:hover{
+    background:var(--darck-blue) ;
+}
+
+
+.box.highlight{
+background: var(--clr-primery-1);
+color: var(--clr-secondery-1);
+}
+
+
+.inactive{
+    pointer-events:none ;
+}
+
+.win{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 150px;
+    height: 100px;
+    background: rgb(255, 255, 255);
+    border-radius: var(--radius);
+
+    
+}
+.win-text{
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    color: var(--clr-dark);
+}
+
+.win-first-letter::first-letter {
+    color: var(--clr-secondery-1);
+}
+
+.play-again{
+    text-transform: capitalize;
+    background: var(--clr-secondery-1);
+    position: absolute;
+    top: 65%;
+    left: 20%;
+    border-radius:5px;
+    font-size: .8rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: .175rem .25rem;
+    color: var(--clr-primery-1);
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+
+
+
+
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Light Mode Styles */
+  body.light-mode {
+    background-color: #fff;
+    color: #333;
+  }
+
+
+  
+  .ld {
+    position: fixed;
+    top: 20px;
+    right: 18px;
+    width: 50px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: transparent;
+    border: 1px solid ;
+    outline: .5px solid var(--clr-light) ;
+    outline-offset: -2px;
+  }
+  
+  .circle {
+    display: block;
+    width: 60%;
+    height: 100%;
+    border-radius: 25px;
+    background: var(--clr-light);
+    border: 2px solid var(--clr-blue);
+    float: left;
+    transition: background-color 0.3s; 
+  }
+  
+  .change-light {
+  
+    background: var(--clr-blue);
+    border: 2px solid var(--clr-light);
+    transition: background-color 0.3s; 
+  }
+
+
+
+
 
